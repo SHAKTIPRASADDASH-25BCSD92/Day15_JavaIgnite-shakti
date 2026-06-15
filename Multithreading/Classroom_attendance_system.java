@@ -96,19 +96,19 @@ class Classroom {
 
 	synchronized void waitForAttendance() {
 		while(attendancestarted == false) {
-			System.out.println("Students are waiting");
+			System.out.println("Students are waiting for attendance");
 			try {
 				wait();
 			}
 			catch (Exception e) {
-				System.out.println("Error handeled");
+				System.out.println("Error handeled Successfully");
 			}
 		}
 		System.out.println("Students marked present !!");
 	}
 	synchronized void startAttendance() {
 		attendancestarted = true;
-		System.out.println("Teacher started attendance ");
+		System.out.println("Teacher started taking attendance ");
 		notifyAll();
 	}
 }
@@ -162,7 +162,7 @@ class Classroom {
 
 	synchronized void waitForAttendance() {
 		while(attendancestarted == false) {
-			System.out.println("Students are waiting");
+			System.out.println("Students are waiting!!");
 			try {
 				wait();
 			}
@@ -216,7 +216,7 @@ public class Classroom_attendance_system {
 			Thread.sleep(3000);
 		} 
 		catch (Exception e) {
-			System.out.println("Eerror Handled");
+			System.out.println("Error Handled succesfully");
 		}
 		teacher.start();
 	}
